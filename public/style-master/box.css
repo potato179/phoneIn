@@ -28,6 +28,12 @@
 .half{
     width: 49.9%;
 }
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
 .box-antiquewhite{
     background-color: AntiqueWhite;
     color: #051428;

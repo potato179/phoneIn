@@ -1,92 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>phoneIn</title>
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity = "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin = "anonymous">
-    <script src = "https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity = "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin = "anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity = "sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin = "anonymous"></script>
-    <script src = "https://kit.fontawesome.com/06fb83cb17.js" crossorigin = "anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">    
-    <link rel = "stylesheet" href = "./public/style-master/border.css">
-    <link rel = "stylesheet" href = "./public/style-master/box.css">
-    <link rel = "stylesheet" href = "./public/style-master/button.css">
-    <link rel = "stylesheet" href = "./public/style-master/font.css">
-    <link rel = "stylesheet" href = "./public/style-master/footer.css">
-    <link rel = "stylesheet" href = "./public/style-master/outline.css">
-    <style>
-        body{
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-        hr{
-            background-color: gray
-        }
-        #main {
-            padding-top: 2%;
-            padding-right: 2%;
-            padding-bottom: 2%;
-            padding-left: 2%;
-        }
-    </style>
-</head>
-<body>
-    <nav class = "navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class = "container">
-            <a class="navbar-brand" href="#">PhoneIn</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class = "navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">폰 스펙</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">내 폰 시세</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">요금 계산기</a>
-                    </li>
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>phoneIn</title>
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity = "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin = "anonymous">
+        <script src = "https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity = "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin = "anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity = "sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin = "anonymous"></script>
+        <script src = "https://kit.fontawesome.com/06fb83cb17.js" crossorigin = "anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">        
+        <link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/examples/carousel/carousel.css">
+        <link rel = "stylesheet" href = "./public/style-master/border.css">
+        <link rel = "stylesheet" href = "./public/style-master/box.css">
+        <link rel = "stylesheet" href = "./public/style-master/button.css">
+        <link rel = "stylesheet" href = "./public/style-master/font.css">
+        <link rel = "stylesheet" href = "./public/style-master/footer.css">
+        <link rel = "stylesheet" href = "./public/style-master/outline.css">
+            <style>
+            body{
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+            hr{
+                background-color: white;
+            }
+            #main {
+                padding-top: 2%;
+                padding-right: 2%;
+                padding-bottom: 2%;
+                padding-left: 2%;
+            }
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
 
-            </div>
-        </div>
-    </nav>
-    <main class = "box-black">
-        <br><br><br><br>
-        <div class = "container">
-            <br><hr><br>
-
-            <br><hr><br>
-        </div>
-    </main>
-    <footer class = "site-footer white box-grey">
-        <br><br>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-15 col-md-10">
-                <h5 class = "white">LINKS</h6>
-                <ul class="footer-links black">
-                    <li><a style = "margin: 5px" href="./license.html">라이선스</a><a style = "margin: 5px" href="https://github.com/potato179/">소스코드</a><a style = "margin: 5px" href="http://scanfcode.com/sitemap/">파트너</a></li>
-                </ul>
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body class = "box-black">
+        <header>
+            <nav class = "navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class = "container container-fluid">
+                    <a class="navbar-brand" href="#">PhoneIn</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="#">성능 비교</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="#">내 폰 시세</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="#">요금 계산기</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
+            </nav>
+        </header>
+        <main>
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                        <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>ㅁㄴㅇㄹ</h1>
+                            <p>lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">알아보기</a></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+                        <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>ㅁㄴㅇㄹ</h1>
+                            <p>lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">알아보기</a></p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </a>
             </div>
-            <hr>
-        </div>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by <a href="#">홍은표</a>. MIT Licensed.</p><br><br>
-            </div>
-        </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script>
+            <div class="container marketing">
+                <br><hr><br>
+                <h1 class = "bold">폰 성능 비교</h1>
+                <br>
+                <div>
+                    <select class = "form-select left" name = "device1" id = "" style = "width: 45%;">
+                        <option value = "i12proM">iPhone 12 Pro Max</option>
+                        <option value = "i12pro">iPhone 12 Pro</option>
+                        <option value = "i12">iPhone 12</option>
+                        <option value = "i12mini">iPhone 12 mini</option>
+                        <option value = "i11proM">iPhone 11 Pro Max</option>
+                        <option value = "i11pro">iPhone 11 Pro</option>
+                        <option value = "i11">iPhone 11</option>
+                        <option value = "iXr">iPhone Xr</option>
+                        <option value = "iXsM">iphone Xs Max</option>
+                        <option value = "iXs">iPhone Xs</option>
+                        <option value = "iX">iPhone X</option>
+                        <option value = "iSe2">iPhone SE (2세대)</option>
+                        <option value = "s21u">갤럭시 S21 Ultra</option>
+                        <option value = "s21p">갤럭시 S21+</option>
+                        <option value = "s21">갤럭시 S21</option>
+                        <option value = "s20u">갤럭시 S20 Ultra</option>
+                        <option value = "s20p">갤럭시 S20+</option>
+                        <option value = "s20">갤럭시 S20</option>
+                        <option value = "s10e">갤럭시 S10e</option>
+                        <option value = "s10p">갤럭시 S10+</option>
+                        <option value = "s10-5g">갤럭시 S10(5G)</option>
+                        <option value = "s10">갤럭시 S10</option>
+                        <option value = "n20u">갤럭시 노트20 Ultra</option>
+                        <option value = "n20">갤럭시 노트20</option>
+                        <option value = "n10p">갤럭시 노트10+</option>
+                        <option value = "n10">갤럭시 노트10</option>
+                        <option value = "a51">갤럭시 A51</option>
+                        <option value = "a71">갤럭시 A 퀀텀</option>
+                    </select>
+                    <div class = "left" style = "width: 10%;"><p class = "center">VS</p></div>
+                    <select class = "form-select left" name = "device1" id = "" style = "width: 45%;">
+                        <option value = "s21u">갤럭시 S21 Ultra</option>
+                        <option value = "s21p">갤럭시 S21+</option>
+                        <option value = "s21">갤럭시 S21</option>
+                        <option value = "s20u">갤럭시 S20 Ultra</option>
+                        <option value = "s20p">갤럭시 S20+</option>
+                        <option value = "s20">갤럭시 S20</option>
+                        <option value = "s10e">갤럭시 S10e</option>
+                        <option value = "s10p">갤럭시 S10+</option>
+                        <option value = "s10-5g">갤럭시 S10(5G)</option>
+                        <option value = "s10">갤럭시 S10</option>
+                        <option value = "n20u">갤럭시 노트20 Ultra</option>
+                        <option value = "n20">갤럭시 노트20</option>
+                        <option value = "n10p">갤럭시 노트10+</option>
+                        <option value = "n10">갤럭시 노트10</option>
+                        <option value = "a51">갤럭시 A51</option>
+                        <option value = "a71">갤럭시 A 퀀텀</option>
+                        <option value = "i12proM">iPhone 12 Pro Max</option>
+                        <option value = "i12pro">iPhone 12 Pro</option>
+                        <option value = "i12">iPhone 12</option>
+                        <option value = "i12mini">iPhone 12 mini</option>
+                        <option value = "i11proM">iPhone 11 Pro Max</option>
+                        <option value = "i11pro">iPhone 11 Pro</option>
+                        <option value = "i11">iPhone 11</option>
+                        <option value = "iXr">iPhone Xr</option>
+                        <option value = "iXsM">iphone Xs Max</option>
+                        <option value = "iXs">iPhone Xs</option>
+                        <option value = "iX">iPhone X</option>
+                        <option value = "iSe2">iPhone SE (2세대)</option>
+                    </select><br>
+                    <div>
+                        <button class = "btn btn-danger button-proceed" style = "width: 100%;"><span class = "center">비교하기!</span></button><br>
+                        <button class = "btn btn-primary button-proceed" style = "width: 100%;"><span class = "center">더 많은 모델 보기</span></button><br>
+                    </div>
+                </div>
+                <br><hr><br>
+                <h1 class = "bold">내 폰 중고 시세</h1>
+                <br>
+                <div>
+                    <select class = "form-select left" name = "device1" id = "" style = "width: 45%;">
+                        <option value = "i12proM">iPhone 12 Pro Max</option>
+                        <option value = "i12pro">iPhone 12 Pro</option>
+                        <option value = "i12">iPhone 12</option>
+                        <option value = "i12mini">iPhone 12 mini</option>
+                        <option value = "i11proM">iPhone 11 Pro Max</option>
+                        <option value = "i11pro">iPhone 11 Pro</option>
+                        <option value = "i11">iPhone 11</option>
+                        <option value = "iXr">iPhone Xr</option>
+                        <option value = "iXsM">iphone Xs Max</option>
+                        <option value = "iXs">iPhone Xs</option>
+                        <option value = "iX">iPhone X</option>
+                        <option value = "iSe2">iPhone SE (2세대)</option>
+                        <option value = "s21u">갤럭시 S21 Ultra</option>
+                        <option value = "s21p">갤럭시 S21+</option>
+                        <option value = "s21">갤럭시 S21</option>
+                        <option value = "s20u">갤럭시 S20 Ultra</option>
+                        <option value = "s20p">갤럭시 S20+</option>
+                        <option value = "s20">갤럭시 S20</option>
+                        <option value = "s10e">갤럭시 S10e</option>
+                        <option value = "s10p">갤럭시 S10+</option>
+                        <option value = "s10-5g">갤럭시 S10(5G)</option>
+                        <option value = "s10">갤럭시 S10</option>
+                        <option value = "n20u">갤럭시 노트20 Ultra</option>
+                        <option value = "n20">갤럭시 노트20</option>
+                        <option value = "n10p">갤럭시 노트10+</option>
+                        <option value = "n10">갤럭시 노트10</option>
+                        <option value = "a51">갤럭시 A51</option>
+                        <option value = "a71">갤럭시 A 퀀텀</option>
+                        <option value = "ip8">iPad (8세대)</option>
+                        <option value = "ip7">iPad (7세대)</option>
+                        <option value = "ipA4">iPad Air (4세대)</option>
+                        <option value = "ipA3">iPad Air (3세대)</option>
+                        <option value = "ipm5">iPad mini (5세대)</option>
+                        <option value = "ipm4">iPad mini (4세대)</option>
+                        <option value = "ipP11-2">11형 iPad Pro (2세대)</option>
+                        <option value = "ipP11-1">11형 iPad Pro (1세대)</option>
+                        <option value = "ipP3">iPad Pro (3세대)</option>
+                        <option value = "ipP4">iPad Pro (4세대)</option>
+                        <option value = "tabs7p">갤럭시 탭 S7+</option>
+                        <option value = "tabs7">갤럭시 탭 S7</option>
+                        <option value = "tabs6l">갤럭시 탭 S6 Lite</option>
+                        <option value = "tabs6">갤럭시 탭 S6</option>
+                        <option value = "tabs5e">갤럭시 탭 S5e</option>
+                        <option value = "taba7">갤럭시 탭 A7</option>
+                        <option value = "taba8-4">갤럭시 탭 A 8.4</option>
+                        <option value = "tabaSpen">갤럭시 탭 A with S Pen</option>
 
-    </script>
-</body>
+                    </select>
+                    <br><br>
+                    <div><h3 class = "left">중고거래 시세&nbsp;&nbsp;</h3><h3 class = "left red">0원</h3></div>
+                    <button class = "btn btn-primary button-proceed" style = "width: 100%;"><span class = "center">더 많은 모델 보기</span></button><br>
+                </div>
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+                </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+                </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+                </div>
+                </div>
+
+                <hr class="featurette-divider">
+                <!-- /END THE FEATURETTES -->
+            </div><!-- /.container -->
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-end"><a href="#">Back to top</a></p>
+                <p>&copy; 2017-2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer>
+        </main>
+    </body>
 </html>
